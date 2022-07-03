@@ -1,3 +1,4 @@
+// Trazendo os elementos do HTML para o JS.
 let sliderElement = document.querySelector("#slider");
 let buttonElement = document.querySelector("#button");
 
@@ -5,6 +6,7 @@ let sizePassword = document.querySelector("#valor");
 let password = document.querySelector("#password");
 let containerPassword = document.querySelector("#container-pw");
 
+// Variável para os caraceteres que serão gerados aleatoriamente.
 let charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%*";
 let novaSenha = "";
 
@@ -14,6 +16,7 @@ sliderElement.oninput = function(){
     sizePassword.innerHTML = this.value;
 }
 
+// Função para gerar a senha.
 function generatePassword(){
     
     let pass = "";
@@ -26,6 +29,7 @@ function generatePassword(){
     novaSenha = pass;
 }
 
+// Função para copiar a senha
 function copyPassword(){
     alert("Senha copiada com sucesso!")
     navigator.clipboard.writeText(novaSenha);
